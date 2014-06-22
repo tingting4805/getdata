@@ -32,8 +32,8 @@ tidy <- cbind(subject,activity,xSub)
 tempmelt <- melt(tidy,id=c("activity","subject"), measure.vars = colnames(tidy)[3:68])
 tidyMean <- dcast(tempmelt, activity + subject ~ variable, mean)
 
-# And export to csv files.
-write.csv(tidy,"tidy.csv")
-write.csv(tidyMean, "tidyMean.csv")
+# And export to txt files.
+write.csv(tidy,"tidy.txt")
+write.csv(tidyMean, "tidyMean.txt")
 
 
